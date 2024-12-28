@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khadija Tasleem</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .main {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        padding: 20px;
+        text-align: center;
+        overflow: hidden;
+        margin: 20px;
+      }
+      .hero img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+      .hero h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        color: #666;
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+      .tools,
+      .industries {
+        margin: 20px 0;
+      }
+      .tools h3,
+      .industries h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .tools img{
+        margin: 5px;
+        display: inline-block;
+        font-size: 14px;
+        background: #f9f9f9;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      .industries span {
+        margin: 5px;
+        display: inline-block;
+    
+        background: linear-gradient(to right, #0052cc, #1d8cf8);     
+        padding: 15px 10px;
+        border-radius: 5px;
+        background: linear-gradient(to right, #0052cc, #1d8cf8);
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        align-items: center;
+        gap: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .industries span:hover{
+        background: linear-gradient(to right, #003b99, #1568c6);
+        transform: translateY(-2px);
+      }
+
+
+      .tools img {
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 15px;
+        }
+        .hero img {
+          width: 100px;
+          height: 100px;
+        }
+        .hero h1 {
+          font-size: 20px;
+        }
+        .hero p {
+          font-size: 14px;
+        }
+        .tools img,
+        .industries span {
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+
+      .works-section h2 {
+        font-size: 28px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .works-section p {
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .works-gallery img {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .works-gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      * Confused Section Styles */
+.confused-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+}
+
+.confused-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.confused-title::before,
+.confused-title::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 50px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.confused-title::before {
+  left: -60px;
+}
+
+.confused-title::after {
+  right: -60px;
+}
+
+.confused-description {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.call-button {
+  background: linear-gradient(to right, #0052cc, #1d8cf8);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.call-button:hover {
+  background: linear-gradient(to right, #003b99, #1568c6);
+  transform: translateY(-2px);
+}
+
+.call-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.socials {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.socials span {
+  margin-right: 5px;
+}
+
+.socials a {
+  color: #000;
+  font-weight: bold;
+  margin: 0 5px;
+  text-decoration: none;
+}
+.styled-fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  .styled-legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+    margin-left: 10px; 
+    position: absolute;
+    top: -10px; /* Slightly above the fieldset */
+    background-color: #ffffff;
+  }
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 10px;
+        }
+        .card img {
+          width: 80px;
+          height: 80px;
+        }
+        .card h1 {
+          font-size: 18px;
+        }
+        .card p {
+          font-size: 12px;
+        }
+        .tools img,
+        .industries span {
+          font-size: 10px;
+          padding: 4px 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="hero">
+        <img src="https://via.placeholder.com/150" alt="Akash" />
+        <h1>Hi! I'm Khadija</h1>
+        <p>
+          I'm a graphic designer with a passion for making things look good. I'm
+          also pretty funny, so if you're looking for someone to design your
+          next marketing campaign, you've come to the right place. Just don't
+          expect me to take myself too seriously.
+        </p>
+        <p>
+          I am a creative and innovative thinker with a strong attention to
+          detail. I am always looking for new ways to improve my skills and
+          knowledge.
+        </p>
+        <div class="tools">
+          <h3>Tools</h3>
+          <img src="./image 3.png" alt="Figma" />
+          <img src="./image 4.png" alt="Photoshop" />
+          <img src="./image 7.png" alt="Illustrator" />
+        </div>
+        <div class="industries">
+          <h3>Industries</h3>
+          <span>Advertising</span>
+          <span>Architecture</span>
+          <span>Business Education</span>
+          <span>Fashion</span>
+          <span>Food And Beverage</span>
+          <span>Technology</span>
+        </div>
+      </div>
+
+      <div class="works-section">
+        <fieldset class="styled-fieldset">
+
+
+       <legend class="styled-legend "> MY WORKS</legend>
+        <p>Recent Ones</p>
+        <div class="works-gallery">
+          <img src="https://via.placeholder.com/300x300" alt="Work 1" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 2" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 3" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 4" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 5" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 6" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 7" />
+          <img src="https://via.placeholder.com/300x300" alt="Work 8" />
+
+        </fieldset>
+        </div>
+
+        <div class="confused-section">
+            <p class="confused-title">Feeling Confused?</p>
+            <p class="confused-description">
+              I'd love to chat with you about how I can help. <strong>Book a call today.</strong>
+            </p>
+            <button class="call-button">
+              <img src="call-icon.png" alt="Call Icon" class="call-icon" />
+              Call Now
+            </button>
+            <div class="socials">
+              <span>Checkout my socials at</span>
+              <a href="https://www.instagram.com" target="_blank">Instagram</a>
+              <a href="https://www.figma.com" target="_blank">Figma</a>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+  </body>
+</html>
